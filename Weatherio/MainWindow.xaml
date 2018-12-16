@@ -1,0 +1,136 @@
+﻿<Window x:Class="Weatherio.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Weatherio"
+        mc:Ignorable="d"
+        Title="Weatherio" Activated="MainWindow_OnActivated" Height="320" Width="320" Background="#A6CDFF"
+        ResizeMode="CanMinimize" BorderBrush="#A6CDFF">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="0*" />
+        </Grid.RowDefinitions>
+        <Label Name="UpdatingLabel" FontFamily="Bahnschrift" Foreground="OrangeRed"
+               HorizontalAlignment="Left" VerticalAlignment="Top"
+               Margin="135,10,0,0" Width="169" Height="29" />
+        <Grid Name="WeatherInfoPanel" Margin="10,0,10,10" Height="202" VerticalAlignment="Bottom">
+            <Label Grid.Row="0" Foreground="White" FontFamily="Bahnschrift" FontSize="30pt" x:Name="TempLabel"
+                   VerticalAlignment="Top" Height="55"
+                   RenderTransformOrigin="0.5,0.5" Margin="10,-56,149,0">
+                <Label.Effect>
+                    <DropShadowEffect
+                        ShadowDepth="2"
+                        Direction="0"
+                        Color="Black"
+                        Opacity="1"
+                        BlurRadius="4" />
+                </Label.Effect>
+            </Label>
+            <Label Grid.Column="0" Foreground="White" Content="Wind speed:" FontFamily="Bahnschrift" FontSize="15pt"
+                   x:Name="WindTextLabel" Margin="150,10,10,158">
+                <Label.Effect>
+                    <DropShadowEffect
+                        ShadowDepth="2"
+                        Direction="0"
+                        Color="Black"
+                        Opacity="1"
+                        BlurRadius="4" />
+                </Label.Effect>
+            </Label>
+            <Label Foreground="White" Content="Feels like:" FontFamily="Bahnschrift" FontSize="15pt"
+                   x:Name="FeelTextLabel" Margin="10,10,149,158">
+                <Label.Effect>
+                    <DropShadowEffect
+                        ShadowDepth="2"
+                        Direction="0"
+                        Color="Black"
+                        Opacity="1"
+                        BlurRadius="4" />
+                </Label.Effect>
+            </Label>
+            <Label Grid.Column="0" Foreground="White" Content="Water:" FontFamily="Bahnschrift" FontSize="15pt"
+                   x:Name="WaterTextLabel" Margin="150,103,10,65">
+                <Label.Effect>
+                    <DropShadowEffect
+                        ShadowDepth="2"
+                        Direction="0"
+                        Color="Black"
+                        Opacity="1"
+                        BlurRadius="4" />
+                </Label.Effect>
+            </Label>
+            <Label Foreground="White" Content="Pressure:" FontFamily="Bahnschrift" FontSize="15pt"
+                   x:Name="PressureTextLabel" Margin="10,103,149,65">
+                <Label.Effect>
+                    <DropShadowEffect
+                        ShadowDepth="2"
+                        Direction="0"
+                        Color="Black"
+                        Opacity="1"
+                        BlurRadius="4" />
+                </Label.Effect>
+            </Label>
+            <Label Grid.Row="0" Foreground="White" FontFamily="Bahnschrift" FontSize="25pt" x:Name="FeelLabel"
+                   HorizontalAlignment="Left" VerticalAlignment="Top" Width="115" Height="49"
+                   RenderTransformOrigin="0.5,0.5" Margin="30,49,0,0">
+                <Label.Effect>
+                    <DropShadowEffect
+                        ShadowDepth="2"
+                        Direction="0"
+                        Color="Black"
+                        Opacity="1"
+                        BlurRadius="4" />
+                </Label.Effect>
+            </Label>
+            <Label Grid.Row="0" Foreground="White" FontFamily="Bahnschrift" FontSize="25pt" x:Name="WindLabel"
+                   HorizontalAlignment="Left" VerticalAlignment="Top" Width="115" Height="49"
+                   RenderTransformOrigin="0.5,0.5" Margin="169,49,0,0">
+                <Label.Effect>
+                    <DropShadowEffect
+                        ShadowDepth="2"
+                        Direction="0"
+                        Color="Black"
+                        Opacity="1"
+                        BlurRadius="4" />
+                </Label.Effect>
+            </Label>
+            <Label Grid.Row="0" Foreground="White" FontFamily="Bahnschrift" FontSize="25pt" x:Name="PressureLabel"
+                   HorizontalAlignment="Left" VerticalAlignment="Top" Width="115" Height="49"
+                   RenderTransformOrigin="0.5,0.5" Margin="30,142,0,0">
+                <Label.Effect>
+                    <DropShadowEffect
+                        ShadowDepth="2"
+                        Direction="0"
+                        Color="Black"
+                        Opacity="1"
+                        BlurRadius="4" />
+                </Label.Effect>
+            </Label>
+            <Label Grid.Row="0" Foreground="White" FontFamily="Bahnschrift" FontSize="25pt" x:Name="WaterLabel"
+                   HorizontalAlignment="Left" VerticalAlignment="Top" Width="115" Height="49"
+                   RenderTransformOrigin="0.5,0.5" Margin="169,142,0,0">
+                <Label.Effect>
+                    <DropShadowEffect
+                        ShadowDepth="2"
+                        Direction="0"
+                        Color="Black"
+                        Opacity="1"
+                        BlurRadius="4" />
+                </Label.Effect>
+            </Label>
+            <Label Foreground="White" FontFamily="Bahnschrift" FontSize="20pt"
+                   x:Name="ConditionLabel" Margin="145,-45,14,212">
+                <Label.Effect>
+                    <DropShadowEffect
+                        ShadowDepth="2"
+                        Direction="0"
+                        Color="Black"
+                        Opacity="1"
+                        BlurRadius="4" />
+                </Label.Effect>
+            </Label>
+        </Grid>
+    </Grid>
+</Window>
